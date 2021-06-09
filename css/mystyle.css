@@ -1,0 +1,30 @@
+#pets{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  columns: 1rem;
+  padding: 1rem;
+  
+}
+
+.pet{
+  border: 1px solid black;
+  background: salmon;
+  padding: 1rem;
+  }
+
+  .pet h3 button {
+    border: none;
+  }
+
+  .pet h3 button:hover {
+    transform: scale(1.21);
+  }
+
+  .pet-name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.inactive {
+  display: none;
+}
