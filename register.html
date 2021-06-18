@@ -19,35 +19,40 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
   <meta name="theme-color" content="#fafafa" />
+  <script src="https://kit.fontawesome.com/f5e6c9f223.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <h1 class="display-1">The Fashion Pet</h1>
+    <h1 class="display-1 center">The Fashion Pet &nbsp;<img class="holder" src="/img/pets.jpg" alt="picture of pets"></h1>
   </header>
 
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+      <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-house-user"></i>Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="register.html"><i class="far fa-address-card"></i>Register</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="services.html"><i class="fas fa-concierge-bell"></i>Services</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="about.html" tabindex="-1" aria-disabled="true">About</a>
+      <a class="nav-link disabled" href="about.html" tabindex="-1" aria-disabled="true"><i class="fas fa-info"></i>&nbsp; About</a>
     </li>
   </ul>
 
+  <div style="text-align: center;">
+    <h2 class="">Register your <i class="fas fa-paw"></i></h2>
+    
+</div>
+<!-- <div id="information">
+</div> -->
   <main class="container">
-    <h2>Register</h2>
-    <div id="information">
-    </div>
-    <form action="#">
+    <form class="fields" action="#">
       <input class="form-control" type="text" name="petName" id="petName" placeholder="Name" /><br />
       <select class="form-control" name="type" id="type">
+        <option value="">--Select pet type-- </option>
         <option value="dog">Dog 🐕 </option>
         <option value="cat">Cat 🐈 </option>
         <option value="bird">Bird 🐦 </option>
@@ -63,22 +68,25 @@
       <select class="form-control" name="petService" id="petService">
         <option value="">--Select Service--</option>
         <option value="hair">Hair cut</option>
-        <option value="nails">nails cut</option>
+        <option value="nails">Nails cut</option>
         <option value="shower">Shower</option>
         <option value="full">Full Service</option>
       </select><br />
       <input class="form-control" type="number" name="petWeight" id="petWeight" placeholder="weight (in lbs)" /><br />
       <input class="form-control" type="text" name="ownerName" id="ownerName" placeholder="Owner's name" /><br />
       <input class="form-control" type="tel" name="contactPhone" id="contactPhone" placeholder="Contact Phone" /><br />
-    </form>
-    <button id="register-btn" class="btn btn-warning">Register</button>
-    <p id="profits"></p>
-    <div id="types">
-      <!-- displayCards function output -->
-    </div>
-    <div id="pets">
-    </div>
-    <input type="text" name="search" id="search"><button>Search</button>
+      <button id="register-btn" class="btn btn-warning">Register</button>
+      <div id="alert-box" class="alert alert-success hidden" role="alert"> The Register Was Successful!!</div>
+      <p id="profits"></p>
+      <div id="types">
+        <!-- displayCards function output -->
+      </div>
+      <div id="pets">
+      </div>
+      <div>
+      </form>
+      
+      <input type="text" name="search" id="search"><button>Search</button>
     <table class="table">
       <thead>
         <th>Name</th>
@@ -92,6 +100,7 @@
         <th>Contact Phone</th>
       </thead>
     </table>
+    </div>
     <!-- <div id="registered-pets-amount"> -->
     <!-- The number of registered pets -->
     </div>
@@ -111,7 +120,6 @@
     ga("set", "anonymizeIp", true);
     ga("set", "transport", "beacon");
     ga("send", "pageview");
-
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
@@ -120,7 +128,6 @@
   <script src="js/register.js"></script>
   <script src="js/main.js"></script>
 
-  Google Analytics: change UA-XXXXX-Y to be your site's ID.
 </body>
 
 </html>
