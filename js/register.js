@@ -1,11 +1,11 @@
 console.log("hello");
 
 const salon = {
-  name: "The Lazy Fashion Pet",
-  phone: "911",
+  name: "The Fashion Pet",
+  phone: "555",
   address: {
-    street: "2nd st.",
-    number: "420",
+    street: "3rd st.",
+    number: "100",
   },
   hours: {
     open: "9:00am",
@@ -71,13 +71,26 @@ function register() {
     txtPhone.value
   );
   if (txtName.value === "" || txtPhone.value === "") {
-    alert("Add the required information");
+    // alert("Add the required information");
+    $("#alert-box")
+      .removeClass("hidden")
+      .addClass("alert-danger")
+      .text("Please provide at least a (Name) and (Contact Phone) ");
+    setTimeout(function () {
+      $("#alert-box").addClass("hidden").removeClass("alert-danger");
+    }, 3000);
   } else {
     console.log(thePet);
     salon.pets.push(thePet);
     displayCards(thePet);
     // display object on html
     clearInputs();
+
+    $("#alert-box").removeClass("hidden");
+    setTimeout(function () {
+      $("#alert-box").addClass("hidden");
+    }, 1000);
+
   }
 }
 
@@ -119,7 +132,10 @@ function displayCards(aPet) {
     icon = "🦛";
   }
   var div = document.getElementById("types");
-  div.innerHTML = "<p> icons of pets..<p>";
+  div.innerHTML = "<h2> Our Registered Pets </h2>";
+  // function countPetsOfType(apet.type) {
+
+  // }
   tmp = `
   <div id="${aPet.id}" class="pet">
   <h3> Name: ${aPet.name} <button onclick="deletePet(${aPet.id})">🗑️<button></h3>
