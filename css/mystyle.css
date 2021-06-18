@@ -1,30 +1,114 @@
-#pets{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  columns: 1rem;
-  padding: 1rem;
-  
+a:visited {
+  color: inherit;
 }
 
-.pet{
+#pets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  columns: 1rem;
+  padding: 1rem;
+}
+
+.pet {
   border: 1px solid black;
   background: salmon;
   padding: 1rem;
+  border-style: ridge;
   }
 
-  .pet h3 button {
-    border: none;
+  img {
+    width: 100px;
+    background-color: gold;
   }
 
-  .pet h3 button:hover {
-    transform: scale(1.21);
-  }
-
-  .pet-name {
+  .nav {
+    background-color: orange;
+    width: auto;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-around;
+    border: 1px black solid;
+    margin-left: 15vh;
+    margin-right: 15vh;
+
+  }
+
+  .fields {
+    min-width: 70px;
+
+  }
+.pet h3 button {
+  border: none;
 }
 
+.pet h3 button:hover {
+  transform: scale(1.21);
+}
+
+.pet-name {
+  display: flex;
+  justify-content: space-around;
+}
+.fa-paw {
+  color: gold;
+}
 .inactive {
   display: none;
+}
+.container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  border: solid black 2px;
+  border-left-color: gold;
+  border-right-color: blue;
+  border-radius: 10px;
+
+}
+
+
+.center {
+  text-align: center;
+}
+
+#services {
+  display: flex;
+  flex-direction: row;
+}
+
+#services a {
+
+  border: black 2px solid;
+  border-radius: 100%;
+
+}
+
+
+
+#services a:hover {
+  background-color: black;
+  font-size: larger;
+  color: red;
+}
+
+#services a:active {
+  background-color: red;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+#map {
+  height: 30rem;
+  background-color: greenyellow;
 }
